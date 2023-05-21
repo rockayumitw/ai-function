@@ -3,15 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "cross-env TAILWIND_MODE=watch vue-cli-service serve",
+    "build": "cross-env TAILWIND_MODE=build vue-cli-service build",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "autoprefixer": "^9.8.8",
+    "axios": "^1.4.0",
     "core-js": "^3.6.5",
+    "current-device": "^0.10.2",
+    "gsap": "^3.11.5",
+    "jquery": "^3.6.4",
+    "material-icons": "^1.13.6",
+    "postcss": "^8.4.23",
+    "swiper": "^9.3.1",
+    "tailwindcss": "^3.3.2",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
+    "vue3-carousel": "^0.3.1",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
@@ -24,11 +34,13 @@
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-airbnb": "^5.0.2",
     "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^7.0.0",
     "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "vue-cli-plugin-tailwind": "~3.0.0"
   },
   "eslintConfig": {
     "root": true,
@@ -42,7 +54,10 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "max-len": "off",
+      "global-require": "off"
+    }
   },
   "browserslist": [
     "> 1%",

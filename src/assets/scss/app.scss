@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// https://fonts.google.com/icons?selected=Material+Icons:done:
+@import '~material-icons/iconfont/material-icons.css';
+
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+    @apply bg-black;
+    .container {
+        max-width: 1296px;
+        margin: 0 auto;
+        padding: 0 12px;
+    }
+}
